@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+
+<body>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <header>
+        <center>
+            <h1>Health Screening Questions for COVID-19</h1>
+        </center>
+    </header>
+    <form name ="corona" action="success.html" onsubmit="return Event(event)">
+        <label><h3>1. Do you have any if the following symtoms</h3></label><br>
+        <span id="error-symptoms" style="color:red; font-size: medium"></span> <br>
+        <input type="checkbox" name="symptom" placeholder="fever or chills">Fever or Chills <br>
+        <input type="checkbox" name="symptom" placeholder="cough">Cough <br>
+        <input type="checkbox" name="symptom" placeholder="short">Shortness of breath or difficulty breathing <br>
+        <input type="checkbox" name="symptom" placeholder="fatigue">Fatigue <br>
+        <input type="checkbox" name="symptom" placeholder="Muscle">Muscle or body aches <br>
+        <input type="checkbox" name="symptom" placeholder="headaches">Headache <br>
+        <input type="checkbox" name="symptom" placeholder="new loss">New loss to taste or smell <br>
+        <input type="checkbox" name="symptom" placeholder="sore">Sore Throat <br>
+        <input type="checkbox" name="symptom" placeholder="cong">Congestion or runny nose <br>
+        <input type="checkbox" name="symptom" placeholder="nausea">Nausea or vommitng <br>
+        <input type="checkbox" name="symptom" placeholder="diarhea">Diarrhea <br>
+
+        <label><h3>2. Do you have a household member who has tested positive with COVID-19 within the last 14 days?</h3></label><br>
+        <span id="error-one" style="color:red; font-size: medium"></span> <br>
+        <input type="radio" name="yes_no" id="yesone">Yes <br>
+        <input type="radio" name="yes_no" id="noone">No <br>
+
+ 
+        <!--<label><h3>3. Do you have a household member who has had symtoms of COVID-19 in the last 14 days?</h3></label> <span id="error-two"></span><br>
+        <input type="radio" name="yes_notwo" id="yestwo">Yes <br>
+        <input type="radio" name="yes_nottwo" id="notwo">No <br>
+
+
+        <label><h3>4. Have you been in close contact (within 6 feet for longer than 15 minutes) with someone who tested positive for COVID-19 or who had symtoms</h3></label><span id="error-three"></span> <br>
+        <input type="radio" name="yes_nothree" id="yesthree">Yes <br>
+        <input type="radio" name="yes_nothree" id="nothree">No <br>
+
+        <label><h3>5. Have you traveled to any of the following states in the last 14 days?</h3></label><span id="error-four"></span> <br> *Please use the link below to check which states you have traveled to due to frequently updates <br>
+        <a href="https://portal.ct.gov/Coronavirus/Travel">https://portal.ct.gov/Coronavirus/Travel</a><br>
+        <input type="radio" name="yes_nofour" id="yesfour">Yes <br>
+        <input type="radio" name="yes_nofour" id="nofour">No <br>!-->
+
+       <p>
+        <input type="submit" class="btn btn-primary" value="Submit"></input> <br>
+        </p>
+      
+    </form>
+    <script src="validate.js"></script>
+</body>
+
+</html>
