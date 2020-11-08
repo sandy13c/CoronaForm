@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+<style>
+    form {
+        margin-top: 70px;
+        margin-left: 40px;
+        margin-bottom: 40px;
+        border: 3px solid black;
+    }
+</style>
+
+<body>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <header>
+        <h1 class="text-center">City of Milford</h1>
+        <h2 class="text-center">Health Screening Questions for COVID-19</h2>
+
+    </header>
+    <form name="corona" method="post" action="/survey/addForm" onsubmit="Result(event)">
+        <span id="error-all" style="color:red; font-size: medium;"></span> <br>
+
+        <label><h3>1. Please enter your employee id</h3></label><br>
+        <span id="error-id" style="color:red; font-size: medium;"></span> <br>
+        <input type="text" name="employee_id">Employee_id <br>
+
+        <!--<label><h3>2. Please enter your email </h3></label>
+        <span id="error-twoid" style="color:red; font-size: medium;"></span> <br>
+        <input type="text" id="email">Email <br>!-->
+
+        <label><h3>2. Do you have any if the following symtoms</h3></label><br>
+        <span id="error-symptoms" style="color:red; font-size: medium"></span> <br>
+        <input type="checkbox" name="checkboxone" value="fever or chills">Fever or Chills <br>
+        <input type="checkbox" name="checkboxone" value="cough">Cough <br>
+        <input type="checkbox" name="checkboxone" value="short">Shortness of breath or difficulty breathing <br>
+        <input type="checkbox" name="checkboxone" value="fatigue">Fatigue <br>
+        <input type="checkbox" name="checkboxone" value="Muscle">Muscle or body aches <br>
+        <input type="checkbox" name="checkboxone" value="headaches">Headache <br>
+        <input type="checkbox" name="checkboxone" value="new loss">New loss to taste or smell <br>
+        <input type="checkbox" name="checkboxone" value="sore">Sore Throat <br>
+        <input type="checkbox" name="checkboxone" value="cong">Congestion or runny nose <br>
+        <input type="checkbox" name="checkboxone" value="nausea">Nausea or vommitng <br>
+        <input type="checkbox" name="checkboxone" value="diarhea">Diarrhea <br>
+        <input type="checkbox" name="checkboxone" value="none">None <br>
+
+
+        <label><h3>3. Do you have a household member who has tested positive with COVID-19 within the last 14 days?</h3></label><br>
+        <span id="error-one" style="color:red; font-size: medium"></span> <br>
+        <input type="radio" name="questiontwo" id="yesone" value="yes"><label for="yesone">Yes</label> <br>
+        <input type="radio" name="questiontwo" id="noone" value="no"><label for="noone">No</label> <br>
+
+
+        <label><h3>4. Do you have a household member who has had symtoms of COVID-19 in the last 14 days?</h3></label> <span id="error-two" style="color:red; font-size: medium"></span><br>
+        <input type="radio" name="questionthree" id="yestwo" value="yes">Yes <br>
+        <input type="radio" name="questionthree" id="notwo" value="no">No <br>
+
+
+        <label><h3>5. Have you been in close contact (within 6 feet for longer than 15 minutes) with someone who tested positive for COVID-19 or who had symtoms</h3></label>
+        <span id="error-three" style="color:red; font-size: medium"></span> <br>
+        <input type="radio" name="questionfour" id="yesthree" value="yes">Yes <br>
+        <input type="radio" name="questionfour" id="nothree" value="no">No <br>
+
+        <label><h3>6. Have you traveled to any of the following states in the last 14 days?</h3></label><span id="error-four" style="color:red; font-size: medium "></span> <br> *Please use the link below to check which states you have traveled to due
+        to frequently updates <br>
+        <a href="https://portal.ct.gov/Coronavirus/Travel " target="_bank">https://portal.ct.gov/Coronavirus/Travel</a><br>
+        <input type="radio" name="questionfive" id="yesfour" value="yes">Yes <br>
+        <input type="radio" name="questionfive" id="nofour" value="no">No <br>
+
+        <p>
+            <input type="submit" class="btn btn-primary " value="Submit"></input> <br>
+        </p>
+
+    </form>
+    <script src="validate.js "></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js "></script>
+</body>
+
+</html>
